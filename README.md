@@ -1,54 +1,41 @@
-📝 TODO App — React + Express
+📝 TODO App
+🚀 My first project with React and Express.js
 
-Prosta aplikacja do zarządzania zadaniami (TODO), stworzona przy użyciu React na frontendzie oraz Express.js na backendzie.
+A simple task management application built to learn how frontend and backend work together.
 
-🚀 To mój pierwszy projekt w React i Express. Tworzę go, aby rozwijać swoje umiejętności i uczyć się budowania aplikacji webowych.
-🛠️ Technologie
+<br>
+
+<br>
+
+🛠️ Tech Stack
+
+<br>
+
 🎨 Frontend
 ⚛️ React
 🟨 JavaScript
 💨 Tailwind CSS
 🔗 Fetch API
+
+<br>
+
 ⚙️ Backend
 🟢 Node.js
 🚂 Express.js
 🔌 REST API
 🌐 CORS
-✨ Funkcjonalności
-➕ Dodawanie nowych zadań
-📋 Wyświetlanie listy zadań
-🗑️ Usuwanie zadań
-🔄 Komunikacja między frontendem a backendem za pomocą REST API
-📁 Struktura projektu
-todo-app/
-├── client/       # Frontend — React
-└── server/       # Backend — Express.js
 
-🚀 Uruchomienie projektu
-1. Sklonuj repozytorium
-git clone <URL_REPOZYTORIUM>
-cd todo-app
+<br>
 
-2. Uruchom backend
-cd server
-npm install
-npm run dev
+<br>
 
-3. Uruchom frontend
+✨ Features
 
-W nowym terminalu:
+<br>
 
-cd client
-npm install
-npm run dev
+➕ Add new tasks
+📋 Display all tasks
+🗑️ Delete tasks
+🔄 Communication between frontend and backend using REST API
 
-🎯 Cel projektu
-
-Głównym celem projektu jest nauka Reacta, Express.js oraz komunikacji między frontendem i backendem.
-
-📌 Plany na przyszłość
-Dodawanie kolejnych funkcjonalności
-Poprawa wyglądu interfejsu
-Dalszy rozwój aplikacji
-
-⭐ Dzięki za odwiedzenie mojego projektu!
+This is my first project where i use react and express
