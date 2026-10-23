@@ -72,44 +72,6 @@ app.post("/api/todos", (req, res) => {
   res.status(201).json(formatTodo(getTodo.get(result.lastInsertRowid)));
 });
 
-// PATCH: zmień nazwę lub status zadania
-app.patch("/api/todos/:id", (req, res) => {
-  const existing = getTodo.get(req.params.id);
-
-  if (!existing) {
-    return res.status(404).json({ error: "Nie znaleziono zadania" });
-  }
-
-  const title = req.body.title;
-  const completed = req.body.completed;
-
-  if (title === undefined && completed === undefined) {
-    return res.status(400).json({ error: "Brak zmian do zapisania" });
-  }
-
-  if (title !== undefined &&
-      (typeof title !== "string" || !title.trim())) {
-    return res.status(400).json({ error: "Nieprawidłowa nazwa zadania" });
-  }
-
-  if (completed !== undefined && typeof completed !== "boolean") {
-    return res.status(400).json({ error: "Nieprawidłowy status zadania" });
-  }
-
-  const nextTitle = title === undefined ? existing.title : title.trim();
-  const nextCompleted = completed === undefined
-    ? existing.completed
-    : Number(completed);
-
-  db.prepare(`
-    UPDATE todos
-    SET title = ?, completed = ?
-    WHERE id = ?
-  `).run(nextTitle, nextCompleted, req.params.id);
-
-  res.json(formatTodo(getTodo.get(req.params.id)));
-});
-
 // DELETE: usuń zadanie
 app.delete("/api/todos/:id", (req, res) => {
   const result = db.prepare(`
